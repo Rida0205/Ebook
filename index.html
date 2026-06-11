@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مكتبة حراء الإلكترونية | HIRAE Ebook</title>
+    <meta name="description" content="مكتبة حراء الإلكترونية - كتاب القدر: رحلة تأملية من قلب الألم إلى شاطئ الرضا. جميع الكتب من إعداد فريق حراء.">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -17,7 +18,7 @@
             font-family: 'Cairo', sans-serif;
             background: linear-gradient(145deg, #f8f5f0 0%, #efe8df 100%);
             color: #2c241a;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* Header */
@@ -62,21 +63,52 @@
             margin-left: 8px;
         }
 
-        /* Hero */
+        /* Hero Section with Main Quote */
         .hero {
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 70px 20px 60px;
             background: linear-gradient(120deg, #2e3a27, #1f2a1b);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 180px;
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            opacity: 0.05;
             color: white;
         }
 
         .hero h2 {
             font-size: 2.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero h2 i {
+            color: #d4a762;
+            margin-left: 12px;
+        }
+
+        .hero-main-quote {
+            font-size: 1.6rem;
+            font-style: italic;
+            border-right: 4px solid #d4a762;
+            padding-right: 25px;
+            margin: 30px auto;
+            max-width: 80%;
+            color: #f0e2cf;
+            font-weight: 500;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
@@ -141,7 +173,6 @@
             background: linear-gradient(145deg, #e9dbc9, #dac29c);
             padding: 30px 20px;
             text-align: center;
-            position: relative;
         }
 
         .book-cover i {
@@ -176,7 +207,7 @@
         .book-desc {
             color: #5a4a38;
             font-size: 0.9rem;
-            line-height: 1.6;
+            line-height: 1.7;
             margin-bottom: 18px;
         }
 
@@ -233,24 +264,162 @@
             transform: translateY(-2px);
         }
 
+        /* Quotes Section */
+        .quotes-section {
+            background: #fff9f0;
+            border-radius: 48px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            border: 1px solid #e8dccc;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2e3a27;
+        }
+
+        .section-title i {
+            color: #d4a762;
+            margin-left: 12px;
+        }
+
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .quote-card {
+            background: white;
+            padding: 25px;
+            border-radius: 24px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.2s;
+            border-right: 4px solid #d4a762;
+        }
+
+        .quote-card:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .quote-text {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2e241f;
+            line-height: 1.7;
+        }
+
+        .quote-context {
+            font-size: 0.75rem;
+            color: #a0805a;
+            margin-top: 12px;
+            padding-top: 8px;
+            border-top: 1px dashed #e2d4c4;
+        }
+
+        /* Ideas Section */
+        .ideas-section {
+            margin: 60px 0;
+        }
+
+        .ideas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .idea-card {
+            background: white;
+            border-radius: 28px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+
+        .idea-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .idea-number {
+            width: 45px;
+            height: 45px;
+            background: #d4a762;
+            color: #1f2a1b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .idea-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #2e3a27;
+        }
+
+        .idea-card p {
+            color: #5a4a38;
+            line-height: 1.7;
+        }
+
+        .idea-card .idea-summary {
+            margin-top: 15px;
+            padding-top: 12px;
+            border-top: 1px solid #efe4d5;
+            font-weight: 600;
+            color: #8b6946;
+        }
+
         /* Team Section */
         .team-section {
             background: #2e3a27;
             color: #f5e7d9;
             border-radius: 48px;
-            padding: 40px;
+            padding: 50px 40px;
             text-align: center;
-            margin: 40px 0;
+            margin: 50px 0;
         }
 
         .team-section h3 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin-bottom: 15px;
         }
 
         .team-section i {
             color: #d4a762;
             margin-left: 10px;
+        }
+
+        /* Closing Quote */
+        .closing-quote {
+            background: linear-gradient(135deg, #1f2a1b, #2e3a27);
+            color: #f5e7d9;
+            border-radius: 48px;
+            padding: 50px 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .closing-quote i {
+            font-size: 2rem;
+            color: #d4a762;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .closing-quote p {
+            font-size: 1.4rem;
+            font-weight: 500;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
         /* Footer */
@@ -267,21 +436,15 @@
             text-decoration: none;
         }
 
-        /* Coming Soon */
-        .coming-soon {
-            background: #e8ddd0;
-            border-radius: 60px;
-            padding: 20px;
-            text-align: center;
-            margin: 30px 0;
-            color: #5a4a38;
-        }
-
         @media (max-width: 700px) {
             .header .container { flex-direction: column; text-align: center; }
             .hero h2 { font-size: 1.6rem; }
+            .hero-main-quote { font-size: 1.2rem; max-width: 95%; }
             .library-header { flex-direction: column; gap: 10px; }
             .btn-group { flex-direction: column; }
+            .section-title { font-size: 1.5rem; }
+            .quotes-section, .ideas-section { padding: 30px 20px; }
+            .closing-quote p { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -299,11 +462,17 @@
 </header>
 
 <section class="hero">
-    <h2><i class="fas fa-landmark"></i> مكتبة حراء الإلكترونية</h2>
-    <p>حيث تُنشر المعرفة بنور الحكمة — جميع الكتب من إعداد فريق حراء</p>
+    <div class="hero-content">
+        <h2><i class="fas fa-book-quran"></i> مكتبة حراء الإلكترونية</h2>
+        <div class="hero-main-quote">
+            "ليس كل ما يحدث لك هو ضدك... بعضه يحملك إليك."
+        </div>
+        <p>كتاب "القدر" — رحلة تأملية من قلب الألم إلى شاطئ الرضا<br>جميع الكتب من إعداد فريق حراء</p>
+    </div>
 </section>
 
 <div class="main-container">
+    <!-- Library Section -->
     <div class="library-header">
         <h3><i class="fas fa-book-open"></i> رف الكتب</h3>
         <span><i class="fas fa-users"></i> جميع الإصدارات من إعداد فريق حراء</span>
@@ -311,17 +480,29 @@
 
     <div class="books-grid" id="booksGrid"></div>
 
-    <!-- اقتباسات تحفيزية -->
-    <div class="coming-soon">
-        <i class="fas fa-quote-right" style="font-size: 1.5rem;"></i>
-        <p style="margin-top: 8px;">"ليس كل ما يحدث لك هو ضدك... بعضه يحملك إليك."</p>
-        <small>— من كتاب "القدر"</small>
+    <!-- Quotes Section -->
+    <div class="quotes-section">
+        <h3 class="section-title"><i class="fas fa-quote-right"></i> اقتباسات من الكتاب</h3>
+        <div class="quotes-grid" id="quotesGrid"></div>
     </div>
 
+    <!-- Ideas Section -->
+    <div class="ideas-section">
+        <h3 class="section-title"><i class="fas fa-lightbulb"></i> أفكار تُغيِّر نظرتك للحياة</h3>
+        <div class="ideas-grid" id="ideasGrid"></div>
+    </div>
+
+    <!-- Team Section -->
     <div class="team-section">
         <h3><i class="fas fa-users"></i> فريق حراء</h3>
         <p>جميع الكتب المتوفرة والمستقبلية في مكتبة HIRAE Ebook هي من إعداد وتأليف ونشر فريق حراء العلمي والثقافي. نقدم المحتوى بروح الرصانة والإتقان.</p>
         <p style="margin-top: 15px;"><i class="fas fa-feather-alt"></i> حراء .. منارة الفكر</p>
+    </div>
+
+    <!-- Closing Quote -->
+    <div class="closing-quote">
+        <i class="fas fa-heart"></i>
+        <p>إذا كنت تتعبك كثرة الأسئلة: "لماذا أنا؟"، وتشتاق إلى قلب راضٍ ينام ملآن بالطمأنينة... فهذا الكتاب هو نورك في الظلام.</p>
     </div>
 </div>
 
@@ -331,50 +512,86 @@
 
 <script>
     // ========================================
-    // 📚 قاعدة بيانات الكتب - أضف كتبك الجديدة هنا بسهولة
+    // 📚 قاعدة بيانات الكتب - أضف كتبك الجديدة هنا
     // ========================================
     const booksData = [
         {
             id: 1,
             title: "القدر",
             category: "فكر وروحانيات",
-            description: "يتناول هذا الكتاب المبارك مفهوم 'القدر' بعمق، ويربط بين الإيمان والإرادة الإنسانية. أعدَّه فريق حراء ليُضيء العقول ويرتقي بالنفوس. يخاطب هذا الكتاب ذلك الجزء المحترق بداخلك الذي يسأل: 'لماذا أنا؟'، ويهمس في أذنك: 'لعل الله أراد بك خيرًا لم تره بعد'.",
+            description: "ليس مجرد كلمات عن القضاء والقدر، بل هو رحلة تأملية تأخذ بيدك من قلب الألم إلى شاطئ الرضا. يخاطب هذا الكتاب ذلك الجزء المحترق بداخلك الذي يسأل: 'لماذا أنا؟'، ويهمس في أذنك: 'لعل الله أراد بك خيرًا لم تره بعد'. بين يديك تجربة روحانية فريدة، تُعيد تعريف علاقتك بالمصائب والإخفاقات، وتجعل من القدر صديقًا حميمًا، لا خصمًا مخيفًا.",
             pages: 210,
             year: "1446هـ - 2025م",
             pdfFile: "qadar.pdf",
             coverIcon: "fas fa-scroll",
             author: "فريق حراء"
         }
-        // ✨ لإضافة كتاب جديد، انسخ ما يلي وألصقه بعد الفاصلة:
-        // ,
-        // {
-        //     id: 2,
-        //     title: "عنوان الكتاب",
-        //     category: "التصنيف",
-        //     description: "وصف مختصر للكتاب",
-        //     pages: 200,
-        //     year: "1446هـ",
-        //     pdfFile: "اسم_الملف.pdf",
-        //     coverIcon: "fas fa-book",
-        //     author: "فريق حراء"
-        // }
+        // ✨ لإضافة كتاب جديد:
+        // ,{ id: 2, title: "عنوان الكتاب", category: "التصنيف", description: "الوصف", pages: 200, year: "1446هـ", pdfFile: "كتاب2.pdf", coverIcon: "fas fa-book", author: "فريق حراء" }
     ];
 
+    // ========================================
+    // 💬 الاقتباسات (التي أعددتها)
+    // ========================================
+    const quotesData = [
+        { text: "فالله لا يكتب شيئًا ليحطمك... بل ليصنعك.", context: "عندما تشعر أن الحياة تحطمك، يذكرك هذا الاقتباس أن التحطيم أحيانًا هو بداية التشكيل." },
+        { text: "القدر ليس مسمارًا في نعشك، بل حجرًا في بنائك.", context: "رسالة أمل لكل من ظن أن محنته هي نهاية الطريق." },
+        { text: "كم مرة مُنعت عن شيء فحزنت... ثم شكرت الله لأنه لم يحدث؟", context: "يوقظ فيك ذكرى كل مرة كان فيها الحرمان هو الحماية بعينها." },
+        { text: "الرضا ليس حالة... بل تدريب طويل.", context: "يحررك من وهم أن الرضا يأتي فجأة، ويعلمك أن تمارسه خطوة بخطوة." },
+        { text: "الصبر ليس انتظارًا سلبيًا للعاصفة... هو أن توقد شمعة الرجاء وأنت تعلم أن الريح قد تطفئها.", context: "أعمق تعريف للصبر: فعل الأمل رغمًا عن الظروف." },
+        { text: "الحمد لله الذي منع، ففي المَنِع كانت العطية.", context: "مفتاح لقلبك ليغلق باب 'لماذا حُرمت' ويفتح باب 'ماذا أُعطيت خلف الحرمان'." },
+        { text: "خروج شخص من حياتك كان رحمة، كما كان دخول شخص آخر حكمة.", context: "عزاء لكل قلب تألم من فراق، وتذكير بأن كل شيء في مكانه الصحيح." },
+        { text: "لست مجرد قارئٍ سلبي في كتاب قدرك، بل كاتبٌ مشارك بقلم اختيارك.", context: "يرد على الشعور بالعجز، ويمنحك مسؤوليتك في كيفية الرد على الأقدار." },
+        { text: "ما معظم ما مررت به... لم يكن ليحدث لولا أن الله أرادك في مكان معين، في وقت معين، مع أشخاص معينين.", context: "يزرع في قلبك الإحساس بأن حياتك ليست سلسلة صدف، بل عمل درامي محكم مكتوب بدقة." },
+        { text: "عندما يصل قلبك لهذا الفهم... تدرك أن كل شيء كان يسير نحوك، لا ضدك.", context: "اللحظة التي ينقلب فيها تصورك الكامل للحياة من اضطهاد إلى رعاية." }
+    ];
+
+    // ========================================
+    // 💡 أفكار الكتاب
+    // ========================================
+    const ideasData = [
+        { 
+            number: "١", 
+            title: "لماذا يحدث هذا لي؟", 
+            content: "يخبرنا الكتاب أن هناك سؤالين: سؤال الضعف 'لماذا أنا؟ لماذا الآن؟' وهذا السؤال يزيدك ألمًا. وسؤال النمو 'ما الحكمة التي يريد الله أن أتعلمها من هذا؟' وهذا السؤال هو الذي يحول المصيبة إلى معلم.",
+            summary: "الألم نفسه ليس هو المشكلة، بل علاقتك به. تغيير السؤال يغير حياتك."
+        },
+        { 
+            number: "٢", 
+            title: "الصبر ليس انتظارًا", 
+            content: "لدينا فكرة خاطئة عن الصبر على أنه 'جلوس سلبي حتى تمر العاصفة'. لكن الصبر الحقيقي هو أن تستمر في الفعل الإيجابي (الدعاء، العمل، الإحسان، الابتسامة) رغمًا عن الظروف القاسية.",
+            summary: "الصبر ليس توقفًا، بل هو استمرار مؤلم بإرادة قوية."
+        },
+        { 
+            number: "٣", 
+            title: "الحرمان عين العطاء", 
+            content: "تخيل أنك منعت من وظيفة ظننت أنها حلم حياتك. بعد سنوات تكتشف أن تلك الوظيفة كانت ستأخذك بعيدًا عن والدك المريض. إذن، المنع كان حماية، والعطية الحقيقية كانت خفية.",
+            summary: "الكتاب يدربك على أن تقول 'الحمد لله' ليس فقط على ما أُعطيت، بل على ما مُنعت أيضًا."
+        },
+        { 
+            number: "٤", 
+            title: "أنت كاتب مشارك، لا قارئ سلبي", 
+            content: "القدر يكتب لك سيناريو الأحداث (خسارة مال، مرض، فراق)، لكنك أنت من يكتب سيناريو رد فعلك (هل تنهار؟ أم تنهض؟ هل تشمت؟ أم تحتسب؟).",
+            summary: "أنت لا تستطيع أن تمنع العاصفة، لكنك تستطيع أن تختار ما إذا كنت ستبني ملجأ أم ستقف في وسطها تصرخ."
+        },
+        { 
+            number: "٥", 
+            title: "الهدف النهائي من القدر", 
+            content: "الكتاب لا يرى أن هدف القدر هو اختبارك فقط، بل الأعمق من ذلك: هدف القدر هو أن 'يصنعك' و'يُظهرك لنفسك'. الله يضعك في مواقف صعبة ليخرج كنوزك الداخلية (الصبر، القوة، الحكمة، الرحمة) التي لا تظهر إلا في الشدائد.",
+            summary: "لن ينمو الإنسان في أرض الراحة، بل في أرض الابتلاءات."
+        }
+    ];
+
+    // عرض الكتب
     function renderBooks() {
         const grid = document.getElementById('booksGrid');
         if (!grid) return;
         grid.innerHTML = '';
 
         booksData.forEach(book => {
+            const shortDesc = book.description.length > 120 ? book.description.substring(0, 120) + '...' : book.description;
             const card = document.createElement('div');
             card.className = 'book-card';
-
-            // اختصار الوصف إذا كان طويلاً
-            let shortDesc = book.description;
-            if (shortDesc.length > 120) {
-                shortDesc = shortDesc.substring(0, 120) + '...';
-            }
-
             card.innerHTML = `
                 <div class="book-cover">
                     <i class="${book.coverIcon}"></i>
@@ -401,7 +618,44 @@
         });
     }
 
+    // عرض الاقتباسات
+    function renderQuotes() {
+        const container = document.getElementById('quotesGrid');
+        if (!container) return;
+        container.innerHTML = '';
+        quotesData.forEach(quote => {
+            const quoteCard = document.createElement('div');
+            quoteCard.className = 'quote-card';
+            quoteCard.innerHTML = `
+                <div class="quote-text"><i class="fas fa-quote-right" style="color:#d4a762; margin-left:8px;"></i> ${quote.text}</div>
+                <div class="quote-context"><i class="fas fa-heart" style="font-size:0.7rem;"></i> ${quote.context}</div>
+            `;
+            container.appendChild(quoteCard);
+        });
+    }
+
+    // عرض الأفكار
+    function renderIdeas() {
+        const container = document.getElementById('ideasGrid');
+        if (!container) return;
+        container.innerHTML = '';
+        ideasData.forEach(idea => {
+            const ideaCard = document.createElement('div');
+            ideaCard.className = 'idea-card';
+            ideaCard.innerHTML = `
+                <div class="idea-number">${idea.number}</div>
+                <h4>${idea.title}</h4>
+                <p>${idea.content}</p>
+                <div class="idea-summary"><i class="fas fa-gem"></i> ${idea.summary}</div>
+            `;
+            container.appendChild(ideaCard);
+        });
+    }
+
+    // تشغيل جميع الدوال
     renderBooks();
+    renderQuotes();
+    renderIdeas();
 </script>
 </body>
 </html>
